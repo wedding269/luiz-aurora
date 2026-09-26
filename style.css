@@ -4,8 +4,33 @@
   box-sizing:border-box;
 }
 
+/* =========================
+   WEDDING GAME GALLERY
+========================= */
+
 #weddingGameGallery {
     display: none;
+}
+
+/* MODALITÀ GALLERIA ATTIVA */
+
+body.gallery-mode #intro {
+    display: none !important;
+}
+
+/* Nasconde tutte le normali sezioni del sito */
+body.gallery-mode section:not(#weddingGameGallery) {
+    display: none !important;
+}
+
+/* Mostra la galleria */
+body.gallery-mode #weddingGameGallery {
+    display: block !important;
+}
+
+/* La Hero rimane visibile */
+body.gallery-mode .hero {
+    display: flex !important;
 }
 
 body{
