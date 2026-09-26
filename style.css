@@ -4,15 +4,129 @@
   box-sizing:border-box;
 }
 
-/* =========================
+/* =========================================
    WEDDING GAME GALLERY
-========================= */
+========================================= */
 
 #weddingGameGallery {
     display: none;
+    width: 100%;
+    padding: 50px 20px 80px;
+    text-align: center;
 }
 
-/* MODALITÀ GALLERIA ATTIVA */
+.game-gallery-title {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.game-gallery-title h2 {
+    font-family: "Allura", cursive;
+    font-size: 65px;
+    font-weight: 400;
+    color: #8f6875;
+    margin-bottom: 5px;
+}
+
+.game-gallery-title p {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    color: #54556b;
+}
+
+
+/* CONTENITORE DELLE FOTO */
+
+.game-gallery {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* FOTO */
+
+.game-gallery img {
+    display: block;
+
+    width: 100%;
+    max-width: 750px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.12);
+}
+
+
+/* =========================================
+   MODALITÀ GALLERIA ATTIVA
+========================================= */
+
+body.gallery-mode #intro {
+    display: none !important;
+}
+
+body.gallery-mode section:not(#weddingGameGallery) {
+    display: none !important;
+}
+
+body.gallery-mode #weddingGameGallery {
+    display: block !important;
+}
+
+body.gallery-mode .hero {
+    display: flex !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    #weddingGameGallery {
+        padding: 35px 14px 60px;
+    }
+
+    .game-gallery-title {
+        margin-bottom: 25px;
+    }
+
+    .game-gallery-title h2 {
+        font-size: 48px;
+    }
+
+    .game-gallery-title p {
+        font-size: 16px;
+    }
+
+    .game-gallery {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .game-gallery img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        border-radius: 12px;
+    }
+}
 
 body.gallery-mode #intro {
     display: none !important;
