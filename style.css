@@ -4,6 +4,10 @@
   box-sizing:border-box;
 }
 
+#weddingGameGallery {
+    display: none;
+}
+
 body{
   font-family:"Playfair Display", serif;
   background-image: url("wall1.png");
